@@ -31,7 +31,8 @@ if ($conn->connect_error) {
             $res = "select * from `products` where 1";
             break;
         case"affPurchased":
-            $achats = "select * from `products_purchased` where 1";
+            $achats = "select * from `products` LEFT JOIN `products_purchased` ON (product_id = products_id)";
+            //$achats = "select * from `products_purchased` where 1";
             break;
     }
 

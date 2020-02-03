@@ -49,6 +49,7 @@ function ajaxCall(params)
                         {
                             var div = document.createElement('div');
                             div.innerHTML = "<h4 style='color: indianred'>"+json[i].products_id+"</h4>";
+                            div.innerHTML+= "<p style='color: darkgoldenrod'>"+json[i].product_name+"</p>";
                             div.innerHTML+= "<p>"+json[i].buyer_name+"</p>";
                             div.innerHTML+= "<p>"+json[i].buyer_address+"</p>";
                             document.getElementById('ajaxContentAchats').appendChild(div);
