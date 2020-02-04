@@ -32,6 +32,9 @@ if ($conn->connect_error) {
             break;
         case"affPurchased":
             $achats = "select * from `products` LEFT JOIN `products_purchased` ON (product_id = products_id)";
+            //Solution:
+            //$achats2 = "SELECT b.`product_name` from `products_purchased` as a, `products` as b WHERE b.product_id = a.products_id";
+            //$achats3 = SELECT b*; a*//
             //$achats = "select * from `products_purchased` where 1";
             break;
     }
